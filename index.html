@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unlock Your $100 Walmart Gift Card Now!</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0071ce;
+      padding: 10px 20px;
+      color: #fff;
+    }
+
+    .navbar .logo img {
+      height: 40px; /* Adjust logo size */
+    }
+
+    .navbar .menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .navbar .menu span {
+      height: 3px;
+      width: 25px;
+      background-color: #fff;
+      margin: 4px 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar .nav-links li {
+      margin-left: 20px;
+    }
+
+    .navbar .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #ff6600;
+    }
+
+    /* Hamburger Menu for Mobile */
+    @media (max-width: 768px) {
+      .navbar .menu {
+        display: flex;
+      }
+
+      .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #0071ce;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 100%;
+        max-width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        animation: slideOut 0.3s ease-out;
+      }
+
+      .navbar .nav-links.active {
+        display: flex;
+        animation: slideIn 0.3s ease-in;
+      }
+
+      .navbar .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
+
+    /* Animations for Menu */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideOut {
+      from {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+    }
+
+    /* Header Section */
+    .header {
+      background-color: #0071ce;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .header p {
+      font-size: 18px;
+      margin: 10px 0 0;
+    }
+
+    /* Main Content Layout */
+    .main-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 40px 0;
+    }
+
+    /* Image Section */
+    .image-container {
+      flex: 1;
+      max-width: 50%;
+      padding: 20px;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 400px; /* Adjust as needed */
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      flex: 1;
+      max-width: 50%;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #ff6600;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 20px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #e65c00;
+    }
+
+    /* Benefits Section */
+    .benefits {
+      text-align: left;
+      margin: 40px 0;
+    }
+
+    .benefits h2 {
+      font-size: 28px;
+      color: #0071ce;
+      margin-bottom: 20px;
+    }
+
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .benefits ul li {
+      font-size: 18px;
+      margin-bottom: 15px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .benefits ul li::before {
+      content: "✔";
+      color: #0071ce;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Footer Section */
+    .footer {
+      background-color: #0071ce;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+
+      .image-container, .cta-section {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .cta-section {
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 28px;
+      }
+
+      .header p {
+        font-size: 16px;
+      }
+
+      .benefits h2 {
+        font-size: 24px;
+      }
+
+      .benefits ul li {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="data:image/png;base64,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" alt="Walmart Logo">
+    </div>
+    <div class="menu" id="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#home">About</a></li>
+      <li><a href="#home">Terms</a></li>
+      <li><a href="#home">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <div class="header" id="home">
+    <h1>🚨 Unlock Your $100 Walmart Gift Card NOW! 🚨</h1>
+    <p>🛒 Shop Smarter, Save Bigger – Your $100 Reward is Waiting!</p>
+  </div>
+
+  <div class="container">
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Image Section -->
+      <div class="image-container">
+        <img src="https://www.freeflys.com/wp-content/uploads/2021/11/free-100-walmart-gift-cards.jpg" alt="Walmart Gift Card">
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <p>⏳ <strong>HURRY!</strong> This offer won’t last forever. Sign up now and claim your $100 Walmart Gift Card before it’s gone!</p>
+        <a href="#" class="cta-button">👉 YES, I Want My $100 Gift Card! 👈</a>
+        <p><em>Don’t miss out – this is your chance to save BIG! 🎉</em></p>
+      </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="benefits">
+      <h2>🔥 Why You Can’t Miss This:</h2>
+      <ul>
+        <li>💰 <strong>Extra Savings:</strong> Stretch your dollars further with $100 to spend on anything you need!</li>
+        <li>🛍️ <strong>Endless Options:</strong> Use it on groceries, electronics, home goods, and more – the choice is yours!</li>
+        <li>🎁 <strong>Exclusive Offer:</strong> Only a few lucky people get this opportunity – don’t let it slip away!</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <p>⏰ <strong>Time’s Running Out!</strong> Sign up now and grab your $100 Walmart Gift Card before it’s too late! 🚀</p>
+    <div>
+      <a href="#terms">Privacy Policy</a> | <a href="#terms">Terms of Service</a> | <a href="#contact">Contact Us</a>
+    </div>
+  </div>
+
+  <script>
+    // Hamburger Menu Toggle with Smooth Close
+    const menu = document.getElementById('menu');
+    const navLinks = document.getElementById('nav-links');
+
+    menu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close Menu on Link Click
+    const navItems = document.querySelectorAll('.nav-links a');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
